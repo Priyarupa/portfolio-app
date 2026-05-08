@@ -1,0 +1,64 @@
+// Container that holds the Sidebar and the Content area
+.main-layout {
+  background-color: #000000; // Deep black background
+  min-height: 100vh;
+  color: #ffffff;
+  //overflow-x: hidden;
+  overflow: hidden; // IMPORTANT
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 4rem); // adjusts for outer padding
+  }
+
+  // This ensures the content area can act as a "parent" 
+  // for the floating navbar on desktop
+  .relative {
+    position: relative;
+    background: #1e1e1f; // Slightly lighter dark for the card look
+    border: 1px solid #383838;
+    border-radius: 20px;
+    padding: 2rem;
+    min-height: 80vh;
+  }
+}
+
+// Spacing for the main content so it doesn't collide with the navbar
+.content-window {
+  margin-top: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  min-height: 0; // VERY IMPORTANT for flex scrolling
+
+  padding: 1rem;
+
+  @media (min-width: 992px) {
+    margin-top: 2rem; // Give space for the floating navbar on desktop
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 1rem;
+    margin-bottom: 5rem; // Give space for the bottom-docked navbar on mobile
+  }
+}
+
+// Global Scrollbar Styling (to match your premium dark theme)
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #383838;
+  border-radius: 10px;
+  
+  &:hover {
+    background: #444;
+  }
+}

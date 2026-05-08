@@ -1,0 +1,70 @@
+<div class="sidebar-card">
+  <p-card>
+    <div class="profile-header">
+     <div class="align">
+       <div class="card flex align-center">
+            <p-image src="photo2.jpeg" alt="Image" width="110" />
+        </div>
+      <!-- <div class="avatar-bg">
+        <img src="photo2.jpeg" class="profile-img" alt="Profile">
+      </div> -->
+      <div class="info-content">
+        <h1 class="name">Priya P.</h1>
+        <p class="title">Software Engineer</p>
+      </div>
+     
+      <button
+        pButton
+        type="button"
+        label="Resume"
+        icon="pi pi pi-download"
+        (click)="downloadPdf()">
+       </button>
+      </div>
+
+
+      <!-- Mobile Toggle -->
+      <button class="info-more-btn" (click)="toggleContact()">
+        <span>{{ showContact ? 'Hide' : 'Show' }} Contacts</span>
+        <i [class]="showContact ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-info" [class.active]="showContact">
+      <hr class="separator">
+
+      <!-- Email -->
+      <div class="contact-item">
+        <div class="icon-box">
+          <i class="pi pi-envelope"></i>
+        </div>
+        <div class="content-wrapper">
+          <label class="label">Email</label>
+          <span>priyanitysri002@gmail.com</span>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="contact-item">
+        <div class="icon-box">
+          <i class="pi pi-map-marker"></i>
+        </div>
+        <div class="content-wrapper">
+          <label class="label">Location</label>
+          <span>Hyderabad, India</span>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="contact-item">
+        <div class="icon-box">
+          <i class="pi pi-building"></i>
+        </div>
+        <div class="content-wrapper">
+          <label class="label">Company</label>
+          <span>Tech Mahindra</span>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>

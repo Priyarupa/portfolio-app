@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+/* Variables */
+:root {
+  --bg-main: #121212;
+  --bg-card: #1e1e1f;
+  --bg-nav: #2b2b2c;
+  --text-white: #fafafa;
+  --text-grey: #d6d6d6;
+  --text-gold: #ffdb70;
+  --border-color: #383838;
+  --gold-gradient: linear-gradient(to bottom right, #ffdb70 0%, #ceb152 100%);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-white);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Custom PrimeNG Progress Bar Override */
+::ng-deep .custom-progress {
+  height: 8px !important;
+  background: var(--border-color) !important;
+  border-radius: 10px;
+  .p-progressbar-value {
+    background: var(--gold-gradient) !important;
+  }
+}

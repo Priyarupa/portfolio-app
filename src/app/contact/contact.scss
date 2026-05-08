@@ -1,0 +1,147 @@
+.separator {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+:host ::ng-deep .p-divider.p-divider-horizontal::before {
+
+  border-top: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+:host ::ng-deep .p-divider-content {
+
+  background: transparent;
+  color: #ffdb70;
+}
+
+
+
+.contact-section {
+  padding: 1rem;
+  // display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  /* IMPORTANT */
+  flex-wrap: nowrap;
+  display: grid;
+  //   grid-template-columns: repeat(auto-fit, min(576px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+:host ::ng-deep .text-card.p-card,
+:host ::ng-deep .profile-card.p-card {
+  display: flex;
+  background: rgba(30, 42, 58, 0.7); // Semi-transparent
+  backdrop-filter: blur(10px); // Glass effect
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@media (max-width: 576px) {
+  :host ::ng-deep .text-card.p-card {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+:host ::ng-deep .text-card.p-card {
+  width: 100%;
+  min-width: 150px;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  overflow-wrap: break-word;
+
+  .action-link {
+    color: #ffdb70;
+  }
+}
+
+:host ::ng-deep .text-card.p-card-body,
+:host ::ng-deep .profile-card.p-card-body {
+  padding: 1.5rem;
+}
+
+
+
+
+.icon-box {
+  background: #1e1e1f;
+  padding: 12px;
+  border-radius: 12px;
+  color: #ffdb70;
+  border: 1px solid #383838;
+  font-size: 1.2rem;
+  width: 52px;
+  height: 52px;
+
+  i {
+    color: #ffdb70; // Matching accent
+    font-size: 1.1rem;
+  }
+}
+
+.action-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+:host ::ng-deep .p-card label {
+  color: #ffdb70;
+}
+
+button {
+  background-color: #ffdb70;
+}
+
+@media (max-width: 992px) {
+  .contact-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

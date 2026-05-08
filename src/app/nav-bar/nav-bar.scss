@@ -1,0 +1,115 @@
+
+// // Mapping the overall container
+// .theme-container {
+//   background-color: #1e2a3a; // Your navbar background
+//   border: 1px solid var(--border-color);
+//   border-radius: 20px; // Rounded corners for the whole card
+//   padding: 20px;
+//   overflow: hidden;
+// }
+
+// :host ::ng-deep .custom-navbar-tabs {
+//   background: transparent;
+
+//   // 1. Heading Strip (Top Navigation)
+//   .p-tablist {
+//     background: rgba(255, 255, 255, 0.05); // Slightly lighter than background to define the area
+//     border: 1px solid var(--border-color);
+//     border-radius: 0 20px 0 20px;
+//     margin-bottom: 20px; 
+
+//     .p-tablist-content {
+//       background: transparent;
+//       border: none;
+//     }
+//   }
+
+//   // 2. Individual Tab Buttons
+//   .p-tab {
+//     background: transparent;
+//     border: none;
+//     color: var(--text-grey);
+//     font-size: 15px;
+//     font-weight: 500;
+//     transition: all 0.3s ease;
+
+//     &.p-tab-active {
+//       color: var(--text-gold) !important;
+//       background: transparent;
+      
+//       .p-tab-ink-bar {
+//         background-color: var(--text-gold);
+//       }
+//     }
+//   }
+
+//   // 3. The Content Area (The Panels)
+//   .p-tabpanels {
+//     background-color: #1e2a3a !important; // Match the card background
+//     border: none; // Remove default PrimeNG borders
+//     color: var(--text-grey);
+//     padding: 10px 0;
+//   }
+
+//   // Ensure individual panel items are also dark
+//   .p-tabpanel {
+//     background-color: #1e2a3a !important;
+//   }
+// }
+:host {
+  // --- MOBILE STYLES (Bottom Dock) ---
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(28, 28, 28, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #383838;
+  border-radius: 20px 20px 0 0;
+  z-index: 1000;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+
+  // --- DESKTOP STYLES (Floating Top Right) ---
+  @media (min-width: 992px) { // Matches PrimeFlex 'lg'
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    background: rgba(30, 30, 31, 0.9);
+    border: 1px solid #383838;
+    border-radius: 0 20px 0 20px; // Matches the corner curve of the content box
+    padding: 0 20px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 15px 10px;
+  justify-content: space-around;
+
+  @media (min-width: 992px) {
+    gap: 30px;
+    padding: 20px;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #d6d6d6;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #cecece;
+  }
+
+  // This class is applied automatically by Angular
+  &.active {
+    color: #ffdb70; // Your gold theme color
+  }
+}

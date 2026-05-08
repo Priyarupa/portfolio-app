@@ -1,0 +1,131 @@
+<h2>Reach Me At</h2>
+ <hr class="separator">
+
+ <div class="contact-section">
+   <div class="card-wrapper">
+      <p-card class="text-card">
+          <div class="icon-box">
+              <i class="pi pi-envelope"></i>
+         </div>
+
+          <h4>EMAIL</h4>
+          <p>priyanityasri002@gmail.com</p>
+
+          <a href="mailto:you@email.com" class="action-link">
+              <i class="pi pi-send"></i>
+             Send email
+           </a>
+      </p-card>
+
+    </div>
+
+      <div class="card-wrapper">
+      <p-card class="text-card">
+          <div class="icon-box">
+              <i class="pi pi pi-phone"></i>
+         </div>
+
+          <h4>PHONE</h4>
+          <p>+91 88973 18345</p>
+      </p-card>
+
+</div>
+     <div class="card-wrapper">
+      <p-card class="text-card">
+          <div class="icon-box">
+              <i class="pi pi pi-linkedin"></i>
+         </div>
+            <h4>LINKEDIN</h4>
+           <p>LinkedIn Link</p>
+           <a href="https://www.linkedin.com/in/priya-punyamanthula-b44b2a234/" class="action-link">
+        <i class="pi pi-external-link"></i>
+        View profile
+      </a>
+      </p-card>
+
+    </div>
+
+      <div class="card-wrapper">
+      <p-card class="text-card">
+          <div class="icon-box">
+              <i class="pi pi pi-github"></i>
+         </div>
+            <h4>GitHub</h4>
+           <p>GitHubLink</p>
+          <a href="https://www.linkedin.com/in/priya-punyamanthula-b44b2a234/" class="action-link">
+          <i class="pi  pi-external-link"></i>
+        View GitHub
+      </a>
+      </p-card> 
+
+     </div>
+</div>
+ 
+  <!-- //<hr class="separator"> -->
+ <p-divider layout="horizontal"  align="center"><b>OR</b></p-divider>
+
+ 
+  <div>
+    <h2>Send me a message!</h2>
+      <p-card class="profile-card">
+          <div class="form-grid">
+
+          <div class="field">
+           <label>Name</label>
+
+          <input
+          type="text"
+          pInputText
+          placeholder="John Doe"
+          class="w-full"
+          />
+          </div>
+
+        <div class="field">
+        <label>Email</label>
+
+      <input
+        type="email"
+        pInputText
+        placeholder="priyanityasri002@gmail.com"
+        class="w-full"
+        />
+       </div>
+       </div>
+
+
+        <div class="field mt-3">
+       <label>Subject</label>
+
+       <input
+          type="text"
+          pInputText
+         placeholder="Job opportunity..."
+         class="w-full"
+        />
+       </div>
+  
+     <!-- Message -->
+      <div class="field mt-3">
+      <label>Message</label>
+
+       <textarea
+        pInputTextarea
+        rows="6"
+        placeholder="Hi, I'd love to connect about..."
+        class="w-full">
+      </textarea>
+      </div>
+
+       <button
+        pButton
+        type="button"
+        label="Send Message"
+        icon="pi pi-send"
+        (click)="openmail()"
+        class="w-full mt-4 send-btn">
+       </button>
+
+
+      </p-card>
+  </div>

@@ -1,0 +1,106 @@
+<h2>Resume</h2>
+ <hr class="separator">
+
+    <div class="education-section">
+      <div class="section-header">
+       <i class="pi pi-graduation-cap icon-box"></i>
+       <span><h2>Education</h2></span>
+   </div>
+    <div class="card">
+            <p-timeline [value]="events" align="alternate" class="customized-timeline">
+                <ng-template #marker let-event>
+                    <div class="icon-box">
+                        <i class="pi pi-graduation-cap icon-box"></i>
+                    </div>
+                </ng-template>
+                <ng-template #content let-event>
+                    <p-card  [header]="event.status" [subheader]="event.date">
+                    </p-card>
+                </ng-template>
+            </p-timeline>
+    </div>
+   
+   <hr class="separator">
+ 
+  <div class="education-section">
+   <div class="section-header">
+    <i class="pi pi pi-building icon-box"></i>
+    <span><h2>Experience</h2></span>
+   </div>
+
+    <div class="card">
+            <p-timeline [value]="element" align="alternate" class="customized-timeline">
+                <ng-template #marker let-event>
+                    <div class="icon-box">
+                        <i class="pi pi pi-building icon-box"></i>
+                    </div>
+                </ng-template>
+                <ng-template #content let-event>
+                    <p-card  [header]="event.status" [subheader]="event.date">
+                    </p-card>
+                </ng-template>
+            </p-timeline>
+    </div>
+
+<hr class="separator">
+
+    <div class="education-section">
+   <div class="section-header">
+    <i class="pi pi-desktop icon-box"></i>
+    <span><h2>Skills</h2></span>
+   </div>
+      <p-card> 
+
+         <div class="skill-item">
+            <div class="skill-title">
+                  <span>.NET (C#)</span>
+                   <span>90%</span>
+             </div>
+
+            <p-progressbar class="skill-progress"
+                   [value]="90"
+                   [showValue]="false">
+             </p-progressbar>
+         </div>
+
+         <div class="skill-item">
+            <div class="skill-title">
+                  <span>SQL SERVER(T-Sql,Storedprocedure)</span>
+                   <span>90%</span>
+             </div>
+
+            <p-progressbar class="skill-progress"
+                   [value]="90"
+                   [showValue]="false">
+             </p-progressbar>
+         </div>
+
+          <div class="skill-item">
+            <div class="skill-title">
+                  <span>Asp .net webApI(Rest-ful)</span>
+                   <span>90%</span>
+             </div>
+
+            <p-progressbar class="skill-progress"
+                   [value]="90"
+                   [showValue]="false">
+             </p-progressbar>
+         </div>
+
+         <div class="skill-item">
+            <div class="skill-title">
+                  <span>Angular(primeNG)</span>
+                   <span>90%</span>
+             </div>
+
+            <p-progressbar class="skill-progress"
+                   [value]="70"
+                   [showValue]="false">
+             </p-progressbar>
+         </div>
+
+    </p-card>
+       
+     
+
+</div>
