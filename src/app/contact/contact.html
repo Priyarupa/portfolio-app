@@ -73,6 +73,8 @@
           type="text"
           pInputText
           placeholder="Priya p."
+          [(ngModel)]="enteredname"
+          name="enteredname"
           class="w-full"
           />
           </div>
@@ -84,6 +86,8 @@
         type="email"
         pInputText
         placeholder="priyanityasri002@gmail.com"
+        [(ngModel)]="enteredemail"
+        name="enteredemail"
         class="w-full"
         />
        </div>
@@ -97,6 +101,8 @@
           type="text"
           pInputText
          placeholder="Job opportunity..."
+         [(ngModel)]="enteredsubject"
+         name="enteredsubject"
          class="w-full"
         />
        </div>
@@ -109,6 +115,8 @@
         pInputTextarea
         rows="6"
         placeholder="Hi, I'd love to connect about..."
+        [(ngModel)]="enteredmessage"
+        name="enteredmessage"
         class="w-full">
       </textarea>
       </div>
