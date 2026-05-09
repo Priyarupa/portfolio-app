@@ -9,6 +9,10 @@
 
   .p-card-body {
     padding: 1.5rem;
+    .text-col{
+      color:#ffdb70;
+    }
+    overflow:break-word;
   }
 }
 
@@ -61,6 +65,3 @@
     }
 }
 
-:host ::ng-deep .p-card-subtitle{
-   color: #ffdb70;
-}

@@ -9,7 +9,11 @@
   .content-section {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 4rem); // adjusts for outer padding
+    min-height: 0;
+
+    @media (min-width: 992px) {
+      height: calc(100vh - 4rem); // adjusts for outer padding on desktop
+    }
   }
 
   // This ensures the content area can act as a "parent" 
@@ -20,22 +24,22 @@
     border: 1px solid #383838;
     border-radius: 20px;
     padding: 2rem;
-    min-height: 80vh;
+    min-height: 0;
+    height: auto;
   }
 }
 
 // Spacing for the main content so it doesn't collide with the navbar
 .content-window {
   margin-top: 1rem;
-  flex: 1;
-  overflow-y: auto;
   overflow-x: hidden;
-
+  overflow-y: visible;
   min-height: 0; // VERY IMPORTANT for flex scrolling
-
   padding: 1rem;
 
   @media (min-width: 992px) {
+    flex: 1;
+    overflow-y: auto;
     margin-top: 2rem; // Give space for the floating navbar on desktop
   }
 
