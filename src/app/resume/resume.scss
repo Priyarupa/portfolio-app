@@ -1,38 +1,50 @@
+/* ========================================= */
+/* CARD DESIGN */
+/* ========================================= */
+
 :host ::ng-deep .p-card {
-  background: rgba(30, 42, 58, 0.7); // Semi-transparent
-  backdrop-filter: blur(10px); // Glass effect
+  background: rgba(30, 42, 58, 0.7);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
   color: #ffffff;
+
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
-  .p-card-body {
-    padding: 1.5rem;
-
-    .label {
-      color: #ffdb70;
-    }
-
-    overflow:break-word;
-  }
+  width: 100%;
 }
 
-.separator {
-  border: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 20px 0;
+:host ::ng-deep .p-card .p-card-body {
+  padding: 1.5rem;
+  overflow-wrap: break-word;
 }
+
+:host ::ng-deep .p-card .label {
+  color: #ffdb70;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ========================================= */
+/* SECTION */
+/* ========================================= */
 
 .education-section {
   padding: 1rem;
   background: transparent;
+  width: 100%;
+  box-sizing: border-box;
 
   .section-header {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 
     .icon-box {
       background: #1e1e1f;
@@ -41,28 +53,165 @@
       color: #ffdb70;
       border: 1px solid #383838;
       font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 0;
+      word-break: break-word;
     }
-   
   }
 }
+
+/* ========================================= */
+/* ICON */
+/* ========================================= */
 
 .icon-box {
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border-radius: 8px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  border-radius: 8px;
+
   box-shadow: -4px 8px 24px rgba(0, 0, 0, 0.12);
 
   i {
-    color: #ffdb70; // Matching accent
+    color: #ffdb70;
     font-size: 1.1rem;
+  }
+}
+
+/* ========================================= */
+/* PARAGRAPH */
+/* ========================================= */
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  word-break: break-word;
+}
+
+/* ========================================= */
+/* SEPARATOR */
+/* ========================================= */
+
+.separator {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 24px 0;
+}
+
+/* ========================================= */
+/* CARD CONTAINER */
+/* ========================================= */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* ========================================= */
+/* TABLET RESPONSIVE */
+/* ========================================= */
+
+@media screen and (max-width: 992px) {
+
+  .education-section {
+    padding: 0.8rem;
+  }
+
+  :host ::ng-deep .p-card .label {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* ========================================= */
+/* MOBILE RESPONSIVE */
+/* ========================================= */
+
+@media screen and (max-width: 768px) {
+
+  .education-section {
+    padding: 0.5rem;
+  }
+
+  .education-section .section-header {
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .education-section .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  :host ::ng-deep .p-card {
+    border-radius: 16px;
+  }
+
+  :host ::ng-deep .p-card .p-card-body {
+    padding: 1rem;
+  }
+
+  :host ::ng-deep .p-card .label {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .icon-box {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* ========================================= */
+/* SMALL MOBILE */
+/* ========================================= */
+
+@media screen and (max-width: 480px) {
+
+  .education-section .section-header {
+    align-items: flex-start;
+  }
+
+  .education-section .section-header h2 {
+    font-size: 1.4rem;
+  }
+
+  :host ::ng-deep .p-card .label {
+    font-size: 0.95rem;
+  }
+
+  p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .icon-box {
+    width: 30px;
+    height: 30px;
   }
 }

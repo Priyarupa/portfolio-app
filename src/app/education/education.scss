@@ -21,7 +21,6 @@
       font-size: 1.8rem;
       margin: 0;
     }
-
   }
 }
 
@@ -48,7 +47,11 @@
 .icon-box {
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -63,4 +66,57 @@
 
 :host ::ng-deep .p-card-subtitle {
   color: #ffdb70;
+}
+
+/* ========================================= */
+/* TIMELINE SPACING */
+/* ========================================= */
+
+:host ::ng-deep .customized-timeline .p-timeline-event {
+  margin-bottom: 2rem;
+}
+
+:host ::ng-deep .customized-timeline .p-card {
+  width: 320px;
+}
+
+/* ========================================= */
+/* MOBILE RESPONSIVE */
+/* ========================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* Convert alternate timeline into vertical */
+  :host ::ng-deep .customized-timeline .p-timeline-event {
+    flex-direction: row !important;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Hide opposite side */
+  :host ::ng-deep .customized-timeline .p-timeline-event-opposite {
+    display: none !important;
+  }
+
+  /* Proper spacing for content */
+  :host ::ng-deep .customized-timeline .p-timeline-event-content {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  /* Responsive cards */
+  :host ::ng-deep .customized-timeline .p-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Timeline separator spacing */
+  :host ::ng-deep .customized-timeline .p-timeline-event-separator {
+    margin-right: 1rem;
+  }
+
+  /* Reduce heading size on mobile */
+  .education-section .section-header h2 {
+    font-size: 1.5rem;
+  }
 }
