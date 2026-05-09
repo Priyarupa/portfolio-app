@@ -7,6 +7,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 interface EventItem {
     status?: string;
     date?: string;
+    role?:string;
     icon?: string;
     color?: string;
     image?: string;
@@ -19,7 +20,6 @@ interface EventItem {
   styleUrl: './resume.scss',
 })
 export class Resume {
-  events: EventItem[];
   element:EventItem[];
   // education = [
   //   {
@@ -39,15 +39,10 @@ export class Resume {
   //   }
   // ];
    constructor() {
-        this.events = [
-                    { status: 'Dhanekula Institute of Engineering and Technology', date: '2019 — 2023(Grade:10)', icon: 'pi-graduation-cap', color:'#ffdb70' },
-                    { status: 'Aditya Junior College', date: '2017-2019(Grade:10)', icon: 'pi-graduation-cap', color:'#ffdb70'},
-                    { status: 'Vidhya Nidhi School', date: '2015-2017(Grade:10)', icon: 'pi-graduation-cap',color:'#ffdb70'},
-                ];
 
         this.element=[
-                   { status: 'Tech Mahindra', date: '2019 — 2023(Grade:10)', icon: 'pi-graduation-cap', color:'#ffdb70' },
-                    { status: 'Tech Mahindra', date: '2017-2019(Grade:10)', icon: 'pi-graduation-cap', color:'#ffdb70'},
+                   { status: 'Software Engineer', date: '2024 — present',role:'At my current role, I work as a .NET Full Stack Developer building scalable enterprise and government service applications using ASP.NET Core, Angular, and SQL Server. I develop secure RESTful APIs, integrate frontend and backend systems, and optimize database performance to deliver reliable and efficient user experiences. Along with feature development, I actively contribute to Agile delivery, production support, API testing, and CI/CD deployment processes.', icon: 'pi-graduation-cap', color:'#ffdb70' },
+                   { status: 'Associate Software Engineer', date: '2023-2024',role:'Completed professional training in .NET Full Stack development with hands-on experience in ASP.NET Core, MVC, Web API, and SQL Server. Worked on developing REST APIs, SQL queries, and backend functionalities for enterprise applications while collaborating in Agile environments using Git version control. Also built an Online Movie Management System as part of practical project-based learning.', icon: 'pi-graduation-cap', color:'#ffdb70'},
                 ];
           
         

@@ -1,22 +1,24 @@
+
 <div class="education-section">
-   <div class="section-header">
-    <i class="pi pi pi-building icon-box"></i>
-    <span><h2>Experience</h2></span>
+      <div class="section-header">
+       <i class="pi pi-graduation-cap icon-box"></i>
+       <span><h2>Education</h2></span>
    </div>
  <hr class="separator">
-
+ 
+   </div>
     <div class="card">
-            <p-timeline [value]="element" align="alternate" class="customized-timeline">
+            <p-timeline [value]="events" align="alternate" class="customized-timeline">
                 <ng-template #marker let-event>
                     <div class="icon-box">
-                        <i class="pi pi pi-building icon-box"></i>
+                        <i class="pi pi-graduation-cap icon-box"></i>
                     </div>
                 </ng-template>
                 <ng-template #content let-event>
                     <p-card  [header]="event.status" [subheader]="event.date">
-                        <p style="font-family: Arial;">{{event.role}}</p>
                     </p-card>
                 </ng-template>
             </p-timeline>
     </div>
-
+   
+   <hr class="separator">
