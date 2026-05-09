@@ -14,7 +14,7 @@ export class Contact {
 openmail()
 {
   const link = document.createElement('a');
-   link.href = 'mailto:you@email.com';
+   link.href = 'mailto:priyanityasri002@gmail.com';
    link.click();
 
 }
