@@ -25,25 +25,17 @@
     padding: 0.5rem;
   }
 
-
+  
   .name {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0;
-
-    @media (max-width: 576px) {
-      font-size: 1.1rem;
-    }
   }
 
   .title {
     font-size: 0.85rem;
     color: #cbd5e1;
     margin-top: 5px;
-
-    @media (max-width: 576px) {
-      font-size: 0.75rem;
-    }
   }
 }
 
@@ -98,12 +90,6 @@ button {
   display: flex;
   align-items: center;
   gap: 15px;
-
-  @media (max-width: 576px) {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
 
   .icon-box {
     width: 38px;

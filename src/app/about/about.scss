@@ -9,12 +9,6 @@
   align-items: center;
   gap: 15px;
 
-  @media (max-width: 576px) {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
   .icon-box {
     width: 38px;
     height: 38px;

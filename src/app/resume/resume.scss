@@ -34,12 +34,6 @@
     gap: 1.5rem;
     margin-bottom: 2rem;
 
-    @media (max-width: 576px) {
-      flex-direction: column;
-      text-align: center;
-      gap: 1rem;
-    }
-
     .icon-box {
       background: #1e1e1f;
       padding: 12px;
@@ -52,12 +46,8 @@
     h2 {
       font-size: 1.8rem;
       margin: 0;
-
-      @media (max-width: 576px) {
-        font-size: 1.5rem;
-      }
     }
-
+   
   }
 }
 
