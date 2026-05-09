@@ -23,7 +23,7 @@ export class SideBar {
 
     link.href = 'priya_p.pdf';
 
-    link.download = 'resume.pdf';
+    link.download = 'Priya_resume.pdf';
 
     link.click();
   }
